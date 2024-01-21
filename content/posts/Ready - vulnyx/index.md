@@ -13,7 +13,7 @@ draft = false
 
 ## Enumeration
 
-![](/vulnyx/easy/ready/ready%20(1).png)
+![](/vulnyx/easy/ready/ready (1).png)
 
 Checking the web pages:
 
