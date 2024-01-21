@@ -23,70 +23,70 @@ Checking the web pages:
 
 Both are apache default pages, lets enumerate with gobuster just to be sure, while the scans run , lets check what redis is:
 
-![](/ready%20(4).png)
+![](images/ready%20(4).png)
 
 Apparently, we are dealing with a database, let's check how we can login with the command *redis-cli*:
 
-![](/ready%20(5).png)
+![](images/ready%20(5).png)
 
 Lets try to login without a username:
 
-![](/ready%20(6).png)
+![](images/ready%20(6).png)
 
 We are logged in! Lets search for the commons commands for redis:
 
-![](/ready%20(7).png)
+![](images/ready%20(7).png)
 
 Before that, we run a nmap enumeration command to see what more info we can find(*it seems, there's no databases in this server...):
 
-![](/ready%20(8).png)
+![](images/ready%20(8).png)
 
 *We found nothing of interest in the webpages*
 
-![](/ready%20(9).png)
+![](images/ready%20(9).png)
 
 I find this excerpt in the [hacktricks](https://book.hacktricks.xyz/network-services-pentesting/6379-pentesting-redis#ssh) page:
 
-![](/ready%20(10).png)
+![](images/ready%20(10).png)
 
 And in redis, I find the following directories:
 
-![](/ready%20(11).png)
+![](images/ready%20(11).png)
 
 Let's try doing those steps using the directory /root/.ssh
 
-![](/ready%20(12).png)
+![](images/ready%20(12).png)
 
 We export the key to the redis server and follow the steps above:
 
-![](/ready%20(13).png)
+![](images/ready%20(13).png)
 
 ## Initial acess and privilege escalation
 We try to log into the ssh session:
 
-![](/ready%20(14).png)
+![](images/ready%20(14).png)
 
 And we have root! We install unzip in this machine to extract the content of the zip:
 
-![](/ready%20(15).png)
+![](images/ready%20(15).png)
 
 We set up a simple http server the target machine with the following command `python3 -m http.server -b <TARGET-MACHINE-IP> <PORT>`
 
 We download the file in our machine with `wget <TARGET-MACHINE-IP>:<PORT>/root.zip´
 
-![](/ready%20(16).png)
+![](images/ready%20(16).png)
 
 Now we use `zip2john` to print the hash of zip into a file and then crack it:
 
-![](/ready%20(17).png)
+![](images/ready%20(17).png)
 
 We extract the contents of the file:
 
-![](/ready%20(18).png)
+![](images/ready%20(18).png)
 
 We find the root flag, now me move on to the user flag:
 
-![](/ready%20(19).png)
+![](images/ready%20(19).png)
 
 With this, we have pwned the machine.
 
