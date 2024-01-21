@@ -13,11 +13,11 @@ draft = false
 
 ## Enumeration
 
-![](/locoweb/vulnyx/easy/ready/ready%20(1).png)
+![](./vulnyx/easy/ready/ready%20(1).png)
 
 Checking the web pages:
 
-![](locoweb/ready%20(2).png)
+![](./vulnyx/easy/ready/ready%20(2).png)
 
 ![](vulnyx/easy/ready/ready%20(3).png)
 
