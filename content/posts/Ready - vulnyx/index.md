@@ -2,6 +2,7 @@
 title = 'Ready - Vulnyx'
 date = 2024-01-20T16:44:27-06:00
 draft = false
+description = "One of the I've managed to solve without the help of writeups of other people."
 tags = ["pentesting","vulnyx","redis"]
 series=["Vulnyx - Easy"]
 series_order=1
