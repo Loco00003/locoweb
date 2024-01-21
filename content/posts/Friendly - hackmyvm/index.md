@@ -4,7 +4,7 @@ date = 2024-01-09T20:12:37-06:00
 summary="My first machine, despite the easy difficulty, it took me quite some time"
 draft = false
 tags=["pentesting","hackmyvm","ftp"]
-series=["Hackmyvm[Easy]"]
+series=["Hackmyvm Easy"]
 series_order=2
 +++
 
