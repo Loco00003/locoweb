@@ -17,7 +17,7 @@ draft = false
 
 Checking the web pages:
 
-![](vulnyx/easy/ready/ready%20(2).png)
+![](./ready%20(2).png)
 
 ![](vulnyx/easy/ready/ready%20(3).png)
 
