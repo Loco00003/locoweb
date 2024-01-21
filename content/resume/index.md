@@ -8,6 +8,6 @@ draft = false
 
 |School   |Degree   |Date   |
 |---|:---:|:---:|
-|![UNAH](/logos/logo-unah.jpg)   |Industrial Electrical Engineering   |2020 - TBD   |
-|![](/logos/logo-ctha.jpeg)   |Electronics Technician   |2019   |
+|![UNAH](images/logo-unah.jpg)   |Industrial Electrical Engineering   |2020 - TBD   |
+|![](images/logo-ctha.jpeg)   |Electronics Technician   |2019   |
          
