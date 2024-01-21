@@ -13,17 +13,17 @@ draft = false
 
 ## Enumeration
 
-![](/ready%20(1).png)
+![](./ready%20(1).png)
 
 Checking the web pages:
 
-![](/ready%20(2).png)
+![](ready%20(2).png)
 
-![](/ready%20(3).png)
+![](../ready%20(3).png)
 
 Both are apache default pages, lets enumerate with gobuster just to be sure, while the scans run , lets check what redis is:
 
-![](/ready%20(4).png)
+![](/ready%20(4).PNG)
 
 Apparently, we are dealing with a database, let's check how we can login with the command *redis-cli*:
 
