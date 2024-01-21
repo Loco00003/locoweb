@@ -13,13 +13,13 @@ draft = false
 
 ## Enumeration
 
-![](/ready%20(1).png)
+![](https://github.com/Loco00003/locoweb/tree/main/static/vulnyx/easy/ready/ready%20(1).png)
 
 Checking the web pages:
 
-![](vulnyx/easy/ready/ready%20(2).png)
+![](/vulnyx/easy/ready/ready%20(2).png)
 
-![](vulnyx/easy/ready/ready%20(3).png)
+![](/vulnyx/easy/ready/ready%20(3).png)
 
 Both are apache default pages, lets enumerate with gobuster just to be sure, while the scans run , lets check what redis is:
 
