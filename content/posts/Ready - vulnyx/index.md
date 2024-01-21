@@ -13,7 +13,7 @@ draft = false
 
 ## Enumeration
 
-![](https://github.com/Loco00003/locoweb/blob/main/static/vulnyx/easy/ready/ready%20(1).png)
+![](../../../../vulnyx/easy/ready/ready%20(1).png)
 
 Checking the web pages:
 
