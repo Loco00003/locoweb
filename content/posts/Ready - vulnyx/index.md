@@ -23,7 +23,7 @@ Checking the web pages:
 
 Both are apache default pages, lets enumerate with gobuster just to be sure, while the scans run , lets check what redis is:
 
-![](/ready%20(4).PNG)
+![](/ready%20(4).png)
 
 Apparently, we are dealing with a database, let's check how we can login with the command *redis-cli*:
 
