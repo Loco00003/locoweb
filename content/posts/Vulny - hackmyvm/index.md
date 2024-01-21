@@ -3,7 +3,9 @@ title = 'Vulny - Hackmyvm'
 date = 2024-01-20T14:47:53-06:00
 draft = false
 summary = "Writeup of the machine vulny from the hackmyvm website"
-tags = ["pentesting","hackmyvm"]
+tags = ["pentesting","hackmyvm","sql","wordpress","python"]
+series=["Hackmyvm - Easy"]
+series_order=1
 +++
 
 # Machine Information
@@ -14,7 +16,9 @@ tags = ["pentesting","hackmyvm"]
 |Author   |SML   |
 |Difficulty   |Easy   |
 |Site   |[hackmyvm](https://hackmyvm.eu)   |
+|Solved on|17-01-2024|
 ***
+***Author's note: The date stated on the blog is date when the article was published, and the date on the table above is the date when the machine was solved.***
 
 ## Recon and enumeration
 

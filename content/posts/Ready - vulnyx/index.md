@@ -2,6 +2,9 @@
 title = 'Ready - Vulnyx'
 date = 2024-01-20T16:44:27-06:00
 draft = false
+tags = ["pentesting","vulnyx","redis"]
+series=["Vulnyx - Easy"]
+series_order=1
 +++
 
 | Name       | Ready   |
@@ -9,7 +12,8 @@ draft = false
 | OS         | Linux   |
 | Author     | d4t4s3c |
 | Difficulty | Easy    |
-| Site           | [vulnyx](https://vulnyx.com)        |
+| Site           | [vulnyx](https://vulnyx.com)|
+|Solved on|18-01-2024|
 
 ## Enumeration
 
@@ -72,7 +76,7 @@ And we have root! We install unzip in this machine to extract the content of the
 
 We set up a simple http server the target machine with the following command `python3 -m http.server -b <TARGET-MACHINE-IP> <PORT>`
 
-We download the file in our machine with `wget <TARGET-MACHINE-IP>:<PORT>/root.zip´
+We download the file in our machine with `wget <TARGET-MACHINE-IP>:<PORT>/root.zip`
 
 ![](images/ready%20(16).png)
 
