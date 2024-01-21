@@ -13,7 +13,7 @@
 
 [[main]]
   name = "machines"
-  pageRef = "posts"
+  pageRef = "machines"
   weight = 10
 [[main]]
     name="resume"
