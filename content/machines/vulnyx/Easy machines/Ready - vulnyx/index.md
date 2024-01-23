@@ -2,8 +2,8 @@
 title = 'Ready - Vulnyx'
 date = 2024-01-20T16:44:27-06:00
 draft = false
-description = "One of the I've managed to solve without the help of writeups of other people."
-tags = ["pentesting","vulnyx","redis"]
+description = "One of machines that I've managed to solve without the help of writeups of other ethical hackers."
+tags = ["pentesting","vulnyx","redis","password bruteforcing","john"]
 series=["Vulnyx Easy"]
 series_order=1
 +++
@@ -42,7 +42,7 @@ We are logged in! Lets search for the commons commands for redis:
 
 ![](images/ready%20(7).png)
 
-Before that, we run a nmap enumeration command to see what more info we can find(*it seems, there's no databases in this server...):
+Before that, we run a nmap enumeration command to see what more info we can find(*it seems, there's no databases in this server...*):
 
 ![](images/ready%20(8).png)
 
