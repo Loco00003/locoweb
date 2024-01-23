@@ -2,7 +2,7 @@
 title = "Serve - Vulnyx"
 date = 2024-01-21T12:18:15-06:00
 summary="Get ready for a long read, despite being an easy machine, took me a while to figure it out."
-tags=["python","keepass","pentesting","vulnyx","easy","password bruteforcing"]
+tags=["python","keepass","pentesting","vulnyx","easy","password bruteforcing","hydra","john"]
 series=["Vulnyx Easy"]
 series_order=2
 +++
@@ -48,12 +48,12 @@ Now, I wait for the scan to end to see if we find something interesting...
 
 ![](imagenes/Pasted%20image%2020240122190402.png)
 
-Nothing... Now, lets remember the message, especially, this part *Change x for your employee number*, now, maybe, if we create our own list with an array of number, lets say, 1 through 100, maybe well find something? So, I create a simple python script that count until 100 and then stops, and then , transfer that to a text file, there are many ways to do this, you may find a better or optimized way, but anyways, here's how I did it:
+Nothing... Now, lets remember the message, especially, this part *Change x for your employee number*, now, maybe, if we create our own list with an array of numbers, lets say, 1 through 100, maybe we'll find something? So, I create a simple python script that count until 100 and then stops, and then , transfer that to a text file, there are many ways to do this, you may find a better or optimized way, but anyways, here's how I did it:
 
 ![](imagenes/Pasted%20image%2020240122191750.png)
 
-1. Declare a variable, and start the count at 0, this , because the way python counts, it rather than starting with 1, it starts with 0, so we have to take that in count.
-2. We use a `while` loop, in simple terms, the loop will the process that's *indented to it* until it meet the condition it will cause its break, in this case, it will stop counter when the number is less than 101. And the `n+=1` is a fancy notation that python has, it's the same as doing this `n=n+1`, which, is what we want:
+1. Declare a variable, and start the count at 0, this , because the way python counts, rather than starting counting from 1, it starts with 0, so we have to keep that in mind.
+2. We use a `while` loop, in simple terms, the loop will the do process that's *indented to it* until it meets the condition it will cause it to break, in this case, it will stop the counter when the number is less than 101. And the `n+=1` is a fancy notation that python has, it's the same as doing this `n=n+1`, which, is what we want:
 We try the code and see if it works:
 
 ![](imagenes/Pasted%20image%2020240122192324.png)
@@ -83,7 +83,7 @@ While that's running, I remember I didn't run a scan on the `/javascript` direct
 
 ![](imagenes/Pasted%20image%2020240122194643.png)
 
-We indeed find another directory there, which , we are also forbidden, lets run a scan on that directory now:
+We indeed find another directory there, which , we are also forbidden to check, lets run a scan on that directory now:
 
 ![](imagenes/Pasted%20image%2020240122195300.png)
 
@@ -115,7 +115,7 @@ There we go! We stop the scan, and download the file, and see what we can do wit
 
 ![](imagenes/Pasted%20image%2020240122203155.png)
 
-And, of course, we use `cat` on it, it throws nothing useful:
+And, of course, we use `cat` on it,and it throws nothing useful:
 
 ![](imagenes/Pasted%20image%2020240122203232.png)
 
@@ -140,7 +140,7 @@ We can, lets download the program, and try to open the file:
 ![](imagenes/Pasted%20image%2020240122210253.png)
 
 
-We have the username : *admin* and the password, and, we see another thing ,a name `webdav`, lets remember our initial webdav scan, we found a directory with that name. Lets check it:
+We have the username : *admin* and the password, and, we see another thing ,a name `webdav`, lets remember our initial gobuster scan, we found a directory with that name. Lets check it:
 
 ![](imagenes/Pasted%20image%2020240122210435.png)
 
@@ -166,7 +166,7 @@ We something strange, instead of starting the crack, it did that instead, next u
 
 I adapt my command, and it looks like this: `hydra -l admin -P bruteforce_pass.txt -s 80 -f 192.168.25.18 http-get /webdav`, we start the crack and...
 
-![](imagenes/Pasted%20image%2020240122213920.png)
+![](imagenes/Pasted%20image%2020240123122950.png)
 
 We get a password! Lets try to login again to the webpage:
 
@@ -262,7 +262,7 @@ Let's try each one of those:
 
 None of those worked, lets try something else.
 
-So, we can run the ,	`wget` command as *teo*, if we use the `-u` switch, when we use `sudo`, so maybe, while we cant access data in this machine, maybe me can forward other information? Lets check the man pages of the `wget command`:
+So, we can run the ,	`wget` command as *teo*, if we use the `-u` switch, when we use `sudo`, so maybe, while we can't access data in this machine, maybe we can forward other information? Lets check the man pages of the `wget command`:
 
 ![](imagenes/Pasted%20image%2020240122232354.png)
 
@@ -311,7 +311,7 @@ Its a script, we try what the script suggests:
 
 ![](imagenes/Pasted%20image%2020240123000218.png)
 
-It  takes to an interactive shell, like vim, so, maybe we can escape it, lets try typing `!/bin/bash`:
+It  takes us to an interactive shell, like vim, so, maybe we can escape it, lets try typing `!/bin/bash`:
 
 ![](imagenes/Pasted%20image%2020240123000317.png)
 
@@ -323,7 +323,7 @@ And with this, we have pwned the machine, quite a long one, but I learned a lot 
 
 ## Things I learned from this machine
 - Check for files with others extensions, as it was seen in this machine, we found a `.kdbx` file, corresponding to the app *KeePass*, which allowed to gain initial access, keep in mind in future CTF machines.
-- Read the man pages of "basic" commands, such as `curl` or `wget`, they can useful in ways a beginner like me wouldn't expect, such ways can be.
+- Read the man pages of "basic" commands, such as `curl` or `wget`, they can useful in ways a beginner like me wouldn't expect, in this case, we retrieved critical information that allowed us to login as a user, a significant improvement compared to the less privileged `www-data` user.
 - Learned how to brute force an `http digest feed` with hydra. With a partial password obtained from the *KeePass* database we downloaded from the webpage.
 - If we have, lets say, a custom script, try running it first, and see what it does, and then check the contents of the code. If we have an interactive shell within the script , we can try doing a escape sequence with `!/bin/bash`.
 
