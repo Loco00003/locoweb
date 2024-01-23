@@ -16,9 +16,8 @@ series_order=1
 |Author   |SML   |
 |Difficulty   |Easy   |
 |Site   |[hackmyvm](https://hackmyvm.eu)   |
-|Solved on|17-01-2024|
 ***
-***Author's note: The date stated on the blog is date when the article was published, and the date on the table above is the date when the machine was solved.***
+
 
 ## Recon and enumeration
 
@@ -55,7 +54,7 @@ We find another 3 directories , lets secret each one of them:
 
 ![](images/vulny%20(9).png)
 
-*Later on, I found this directories on the /wp-admin directories, but could'nt access them*
+*Later on, I found this list of directories on the /wp-admin directories, but couldn't access them*
 ***
 
 ![](images/vulny%20(10).png)
@@ -77,7 +76,7 @@ Lets follow this steps, we find nothing of interest in the database tables:(make
 
 ![](images/vulny%20(15).png)
 
-Apparently, this database has no information at all, ideally , it would have user and password information, I decide to do a little bit of research on the wp file manager and it's version to see if it can be exploited in some way.
+Apparently, this database has no information at all, ideally , it would contain user and password information, I decide to do a little bit of research on the wp file manager and its version to see if it can be exploited in some way.
 
 After a while, a find a [github](https://github.com/ircashem/wp-file-manager-plugin-exploit) page, containing a exploit for this app, it a plugin for wordpress, and the exploit will a allow remote command execution, now I'll follow this steps, and see if I can get a reverse shell:
 
@@ -105,7 +104,7 @@ It should work now, lets try again:
 
 ![](images/vulny%20(21).png)
 
-We find another error, but this time, in my opinion, the programmers part, didn't it say that 6.0 was also vulnerable?
+We find another error, but this time, in my opinion, the programmers part, didn't it say that version 6.0 was also vulnerable?
 
 ![](images/vulny%20(22).png)
 
@@ -154,7 +153,7 @@ Besides root, only the user *adrian* can use a shell session, lets go to his hom
 
 ![](images/vulny%20(33).png)
 
-We can't access anything interesting in this directory, but now we know we have to pivot to this user, lets check if theres something of interest ing the `/var/www/` directory:
+We can't access anything interesting in this directory, but now we know we have to pivot to this user, lets check if theres something of interest the `/var/www/` directory:
 
 ![](images/vulny%20(34).png)
 
@@ -197,8 +196,8 @@ And we have pwned the machine.
 
 ## Thing I learned from this machine
 
-- Wordpress vulnerabililty in versions ranging from (6.0 to 6.8)
-- How to access a database I downloaded from a file server with mysql(and that not always those databases will have data on them...)
-- Remember the start a bash shell when getting a full TTY(if not using bash a main shell session)
-- Check config files for useful information
-- Apparently, after checking other writeups, I could've use the metasploit framework too for this machine.
+- Wordpress vulnerabililty in versions ranging from (6.0 to 6.8).
+- How to access a database I downloaded from a file server with mysql(and that not always those databases will have data on them...).
+- Remember to start a bash shell when settinp up a full TTY in the netcat listener(if not using bash a main shell session).
+- Check config files for useful information.
+- Apparently, after checking other writeups, I could've used the metasploit framework too for this machine.

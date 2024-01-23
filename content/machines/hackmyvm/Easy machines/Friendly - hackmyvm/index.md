@@ -63,9 +63,10 @@ We are in the ftp server, lets check for interesting files.
 
 We find the index.html file, which is nothing more than the page we saw before, and we can see we have read and write privileges over it, maybe we can upload something? I'll try with the text file of my nmap scan:
 ![](imagenes/Pasted%20image%2020240109205653.png)
+
 And it uploaded correctly, if we check the page, we should see our scan:
 ![](imagenes/Pasted%20image%2020240109205725.png)
-Now, we are gonna try uploading a php reverse shell, but first, we have to modify it's content, for the listener we are gonna run in our machine:
+Now, we're going to try uploading a php reverse shell, but first, we have to modify its content, for the listener we are going to run in our machine:
 ![](imagenes/Pasted%20image%2020240109210055.png)
 We upload the exploit to the ftp server:
 ![](imagenes/Pasted%20image%2020240109210147.png)
@@ -74,10 +75,13 @@ We set up our netcat listener, and then on the webpage, we should go to the url 
 
 ## Initial access and privilege escalation
 We have the user shell, we list the directory contents:
+
 ![](imagenes/Pasted%20image%2020240109210430.png)
+
 We go to the home directory to se if we find something there:
 We find a posible *username: RiJaba1*
 Inside the directory we find the user flag:
+
 ![](imagenes/Pasted%20image%2020240109210733.png)
 
 Now, we need to do some privelege escalation, we run a sudo -l
@@ -102,12 +106,19 @@ We are going to try with method A
 We run the command, and now we have root privileges, lets check what we can find:
 
 ![](imagenes/Pasted%20image%2020240109211436.png)
+
 We go to the root directory and find the flag, we run an ls -al , and we can see we only have read permissions as a user, we change it with chmod 777 and try to discover it with cat:
+
 ![](imagenes/Pasted%20image%2020240109211740.png)
+
 Apparently, the flag we found isnt the correct one, we run a `find / -name root.txt` , to see if we can find the correct one:
+
 ![](imagenes/Pasted%20image%2020240109212033.png)
+
 And we found the one that's most likely the one we are looking for, which would be the one that's in the apache2 folder, which makes sense, since it's this machines main service(ignore the the one in the home folder, I copied it when I was trying something else), we cat that text file, and we should get the flag string:
+
 ![](imagenes/Pasted%20image%2020240109212322.png)
+
 And with this, we are finished with the machine.
 
 
