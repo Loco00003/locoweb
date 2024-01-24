@@ -103,7 +103,7 @@ I add that extension to the gobuster scan, and try again,while the scan was runn
 
 ![](imagenes/Pasted%20image%2020240122202131.png)
 
-And, I would make sense, since, storing a password in a plain SQL file is not safe at all, and another thing to note is, in both linux and macOS, the name changes to *KeePassX*, so, maybe, the file extension changes too, lets wait and see if the scan throw any results:
+And, it really makes sense, since, storing a password in a plain SQL file is not safe at all, and another thing to note is, in both linux and macOS, the name changes to *KeePassX*, so, maybe, the file extension changes too, lets wait and see if the scan throw any results:
 
 ![](imagenes/Pasted%20image%2020240122202847.png)
 
@@ -160,7 +160,7 @@ Great,we export that to a text file.Now lets adapt the hydra command we saw abov
 
 ![](imagenes/Pasted%20image%2020240122213538.png)
 
-We something strange, instead of starting the crack, it did that instead, next up, I found the following in the same post:
+We get something strange, instead of starting the crack, it did that instead, next up, I found the following in the same post:
 
 ![](imagenes/Pasted%20image%2020240122213701.png)
 
@@ -172,7 +172,7 @@ We get a password! Lets try to login again to the webpage:
 
 ![](imagenes/Pasted%20image%2020240122214047.png)
 
-Ok, we are in, but theres nothing there... Maybe, if we try login with SSH?
+Ok, we are in, but theres nothing there... Maybe, if we try to login with SSH?
 
 ![](imagenes/Pasted%20image%2020240122214748.png)
 
@@ -307,11 +307,11 @@ It's a ruby file, lets search how we can escalate privileges with this info,firs
 
 ![](imagenes/Pasted%20image%2020240123000105.png)
 
-Its a script, we try what the script suggests:
+It's a script, we try what the script suggests:
 
 ![](imagenes/Pasted%20image%2020240123000218.png)
 
-It  takes us to an interactive shell, like vim, so, maybe we can escape it, lets try typing `!/bin/bash`:
+It takes us to an interactive shell, like **vim**, so, maybe we can escape it, lets try typing `!/bin/bash`:
 
 ![](imagenes/Pasted%20image%2020240123000317.png)
 
@@ -322,9 +322,9 @@ We have root, lets look for the root flag, and pwn the machine:
 And with this, we have pwned the machine, quite a long one, but I learned a lot from this one. 
 
 ## Things I learned from this machine
-- Check for files with others extensions, as it was seen in this machine, we found a `.kdbx` file, corresponding to the app *KeePass*, which allowed to gain initial access, keep in mind in future CTF machines.
-- Read the man pages of "basic" commands, such as `curl` or `wget`, they can useful in ways a beginner like me wouldn't expect, in this case, we retrieved critical information that allowed us to login as a user, a significant improvement compared to the less privileged `www-data` user.
-- Learned how to brute force an `http digest feed` with hydra. With a partial password obtained from the *KeePass* database we downloaded from the webpage.
+- Check for files with other less common extensions, as it was seen in this machine, we found a `.kdbx` file, corresponding to the app *KeePass*, which allowed to gain initial access, keep this fact in mind for future CTF machines.
+- Read the man pages of "basic" commands, such as `curl` or `wget`, they can useful in ways a beginner like me wouldn't expect, in this case, we retrieved critical information that allowed us to login as a more priveleged user, a significant improvement compared to the restricted `www-data` user.
+- Learned how to brute force an `http digest feed` with hydra. With a **partial password** obtained from the *KeePass* database we downloaded from the webpage.
 - If we have, lets say, a custom script, try running it first, and see what it does, and then check the contents of the code. If we have an interactive shell within the script , we can try doing a escape sequence with `!/bin/bash`.
 
 

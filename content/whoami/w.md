@@ -10,10 +10,10 @@ This blog will serve as a log of practice machines on different platforms. In th
 -   Information about the machine (difficulty, platform of origin, operating system, difficulty, etc.).
 - Step-by-step thought process while I was trying to solve machine
 -   Observation of things I could do better in the future when solving other machines.
--   Things I learned from the machine
+-   Things I learned from the machine.
 
 It will also serve as a portfolio for any future projects related to pentesting, programming, or anything new I learn.
 
 If you've read through some of my write-ups or something else on my page, thanks for your time!
 
-*As of the date of 20-01-2024 this page is still in construction, its layout or information may change in the future*
+*As of the date of 23-01-2024 this page is still in construction, its layout or information may change in the future.*
