@@ -1,21 +1,21 @@
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "loco0000"
+#title = "loco0000"
 
 [params]
   displayName = "EN"
   isoCode = "en"
   rtl = false
   dateFormat = "2 January 2006"
-  # logo = "img/logo.png"
-  # secondaryLogo = "img/secondary-logo.png"
-  # description = "My awesome website"
+   logo = "imagenes/loco-logo-1000x1000.png"
+   secondaryLogo = "imagenes/loco-logo-1000x1000.png"
+  # description = "Locoweb V1.009"
   # copyright = "Copy, _right?_ :thinking_face:"
 
  [author]
    name = "loco0000"
-   image = "imagenes/necoarc.jpg"
+   image = "imagenes/nazuna.jpg"
    headline = "ハッキングにようこそ！"
    bio = "Electrical Engineering student and aspiring pentester."
    links = [
