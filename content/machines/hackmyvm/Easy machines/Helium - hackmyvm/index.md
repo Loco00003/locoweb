@@ -1,5 +1,5 @@
 +++
-title = "Helium - Hackmyvm"
+title = "Helium"
 date = 2024-01-23T17:56:40-06:00
 summary="Another machine by sml, but this time with a twist, this one also took me a while..."
 tags=["pentesting","hackmyvm","steganography"]

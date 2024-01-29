@@ -1,5 +1,5 @@
 +++
-title = 'Vulny - Hackmyvm'
+title = 'Vulny'
 date = 2024-01-20T14:47:53-06:00
 draft = false
 summary = "Writeup of the machine vulny from the hackmyvm website"
