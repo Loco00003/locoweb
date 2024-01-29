@@ -33,7 +33,9 @@ weight = 1
 #     { flickr = "https://www.flickr.com/photos/username/" },
 #     { foursquare = "https://foursquare.com/username" },
       { github = "https://github.com/Loco00003" },
-      { hackmyvm="https://hackmyvm.eu/profile/?user=loco0000"}
+      { hackmyvm="https://hackmyvm.eu/profile/?user=loco0000"},
+      { thm = "https://tryhackme.com/p/loco0000"}
+
 #     { gitlab = "https://gitlab.com/username" },
 #     { google = "https://www.google.com/" },
 #     { hashnode = "https://username.hashnode.dev" },
