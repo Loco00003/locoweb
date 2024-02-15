@@ -1,0 +1,17 @@
+[[main]]
+  name = "maquinas"
+  pageRef = "machines"
+  weight = 10
+[[main]]
+    name="curriculum"
+    pageRef="resume"
+    weight= 20
+#[[main]]
+#    name = "etiquetas"
+#    pageRef="etiquetas"
+#    weight=30
+
+[[main]]
+    name="whoami"
+    pageRef="whoami"
+    weight= 40

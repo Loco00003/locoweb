@@ -15,7 +15,7 @@ draft= false
 | Site       | [hackymyvm](https://hackmyvm.eu)          |
 | Difficulty | Easy          |
 
-## Recon
+## Recon and enumeration
 We start with our service recon with nmap:
 
 ![](imagenes/Pasted%20image%2020240128185639.png)
@@ -42,7 +42,7 @@ We try viewing the webpage again:
 
 ![](imagenes/Pasted%20image%2020240128201329.png)
 
-It works, good. Now, we have a *domain name*, and we have *port 53* open, lets consult [hacktricks](https://book.hacktricks.xyz) to see what we can find. Eventually, in this [section](https://book.hacktricks.xyz/network-services-pentesting/pentesting-dns#zone-transfer)
+It works, good. Now, we have a *domain name*, and we have *port 53* open, lets consult [hacktricks](https://book.hacktricks.xyz) to see what we can find. Eventually,I find something in this [section](https://book.hacktricks.xyz/network-services-pentesting/pentesting-dns#zone-transfer).
 
 ![](imagenes/Pasted%20image%2020240128201505.png)
 
@@ -50,7 +50,7 @@ Didn't really know what `AXFT` was, so I [googled](https://www.briskinfosec.com/
 
 ![](imagenes/Pasted%20image%2020240128202047.png)
 
-Since we have both `IP` and `domain name`, let try with the second command of the `zone transfer section`.
+Since we have both `IP` and `domain name`, lets try with the second command of the `zone transfer section`.
 
 ![](imagenes/Pasted%20image%2020240128202241.png)
 
@@ -81,7 +81,7 @@ I found this script from this [blog](https://darrenmartynie.wordpress.com/2021/1
 
 ![](imagenes/Pasted%20image%2020240128211456.png)
 
-In a nutshell, what it does, it creates a *nginx.conf* file in the `/tmp` directory, sets the `user` as `root`, establishes some capabilities of the server, then, **starts an http server on the root directory**. After that, it launches *nginx* with `sudo` privileges and the config file it just created and shows the contents of the `/etc/passwd` directory. 
+In a nutshell, what it does, it creates a *nginx.conf* file in the `/tmp` directory, sets the `user` as `root`, establishes some capabilities of the server, then, **starts an http server on the root directory**. After that, it launches *nginx* with `sudo` privileges with the config file it just created and shows the contents of the `/etc/passwd` directory. 
 
 Now, I adapted this script for what I need from this machine, so, I did this:
 
@@ -96,7 +96,7 @@ The script successfully starts the http server with the `config` file the script
 ![](imagenes/Pasted%20image%2020240128212212.png)
 
 ## Privilege Escalation
-And we have the root flag, but, **we didn't escalate privileges to super user**, but, checking the blog even further, the author did escalate privileges, here's how he did it:
+And we have the root flag, but, **we didn't escalate privileges to super user**. Checking the blog even further, the author did escalate privileges, here's how he did it:
 
 ![](imagenes/Pasted%20image%2020240128214019.png)
 
@@ -122,5 +122,5 @@ Well, that's not good, maybe there's an easier way. Now, I decide to consult ano
 
 ## Things I learned from this machine
 - If there are domains involved, add them to my `/etc/hosts` file, and run related domain commands(`dig` or `nslookup`) to obtain information about the machine.
-- **Always** check before hand the contents of the web page when logged in as a user, if we are lucky, we could have unrestricted privileges on that directory, and write a simple php code to **enable remote code execution, and get a reverse shell on our machine**.
+- **Always** check before hand the content of the directory where the web page assets are when logged in as a user, if we are lucky, we could have unrestricted privileges on that directory, and write a simple php code to **enable remote code execution, and get a reverse shell on our machine**.
 

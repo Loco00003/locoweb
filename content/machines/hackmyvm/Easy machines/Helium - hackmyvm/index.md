@@ -7,7 +7,7 @@ series=["Hackmyvm Easy"]
 series_order=3
 +++
 
-## Machine Info
+## Machine info
 | Name       | helium       |
 | ---------- | ------ |
 | OS         | Linux Debian |
@@ -15,7 +15,7 @@ series_order=3
 | Site       | [hackmym](https://hackmyvm.eu)       |
 | Difficulty | Easy       |
 
-## Enumeration
+## Recon and enumeration
 I run my usual nmap scan  `sudo nmap -oN helium_scan.txt -vv -sS -sC -sV -T4 -p- 192.168.25.19`
 
 ![](imagenes/Pasted%20image%2020240123181823.png)
@@ -76,7 +76,7 @@ Indeed I did... I try to download the file with `wget`:
 
 ![](imagenes/Pasted%20image%2020240123200204.png)
 
-We got it. I hear it, it sounds like some kind of morse code,lets see if we can find an online tool for it. Finally, I find this [webpage](https://morsecode.world/international/decoder/audio-decoder-expert.html) on it, I upload the file, and select the option that matches the audio I have:
+We got it. I hear it, it sounds like some kind of morse code,lets see if we can find an online tool for it. Finally, I find this [webpage](https://morsecode.world/international/decoder/audio-decoder-expert.html) on it, I upload the file, and select the option that matches the sound of the audio I have:
 
 ![](imagenes/Pasted%20image%2020240123201347.png)
 
@@ -94,7 +94,7 @@ And, we are in! Lets get that user flag, and find out with `sudo -l` what comman
 
 ![](imagenes/Pasted%20image%2020240123202348.png)
 
-Lets search that on [gtfobins]():
+Lets search that on [gtfobins](https://gtfobins.github.io/gtfobins/ln/):
 
 ![](imagenes/Pasted%20image%2020240123202539.png)
 
@@ -102,7 +102,7 @@ Lets try that:
 
 ![](imagenes/Pasted%20image%2020240123202630.png)
 
-And we got root, lets get the flag, and finish this machine:
+And we got root, lets get the flag and finish this machine:
 
 ![](imagenes/Pasted%20image%2020240123202738.png)
 

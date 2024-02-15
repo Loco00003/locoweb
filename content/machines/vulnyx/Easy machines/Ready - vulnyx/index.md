@@ -8,6 +8,7 @@ series=["Vulnyx Easy"]
 series_order=1
 +++
 
+## Machine information
 | Name       | Ready   |
 | ---------- | ------- |
 | OS         | Linux   |
@@ -38,7 +39,7 @@ Lets try to login without a username:
 
 ![](images/ready%20(6).png)
 
-We are logged in! Lets search for the commons commands for redis:
+We are logged in! Lets search for the common commands for redis:
 
 ![](images/ready%20(7).png)
 
@@ -74,6 +75,8 @@ We try to log into the ssh session:
 And we have root! We install unzip in this machine to extract the content of the zip:
 
 ![](images/ready%20(15).png)
+
+It has a password... Lets crack it.
 
 We set up a simple http server the target machine with the following command `python3 -m http.server -b <TARGET-MACHINE-IP> <PORT>`
 

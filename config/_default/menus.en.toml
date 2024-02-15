@@ -17,16 +17,16 @@
   weight = 10
 [[main]]
     name="resume"
-    pageRef="resume.md"
+    pageRef="resume"
     weight= 20
-[[main]]
-    name = "tags"
-    pageRef="tags"
-    weight=30
+#[[main]]
+#    name = "tags"
+#    pageRef="tags"
+#    weight=30
 
 [[main]]
     name="whoami"
-    pageRef="w.md"
+    pageRef="whoami"
     weight= 40
 #[[main]]
 #  name = "Parent"

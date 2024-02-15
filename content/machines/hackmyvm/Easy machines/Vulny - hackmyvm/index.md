@@ -45,7 +45,7 @@ Let's enumerate the /secret directory:
 
 ![](images/vulny%20(6).png)
 
-We find another 3 directories , lets secret each one of them:
+We find another 3 directories , lets check each one of them:
 
 ![](images/vulny%20(7).png)
 
@@ -59,7 +59,7 @@ We find another 3 directories , lets secret each one of them:
 
 ![](images/vulny%20(10).png)
 
-Lets check the /uploads directory in /wp-content:
+Lets check the `/uploads` directory in `/wp-content`:
 
 ![](images/vulny%20(11).png)
 
@@ -67,16 +67,16 @@ We find a zip-file, lets download it and see its contents:
 
 ![](images/vulny%20(12).png)
 
-Among the files of the zip, se file an sql file, we research how to open it:
+Among the files of the zip,we see file an `.sql` file, we research how to open it:
 
 ![](images/vulny%20(13).png)
 ![](images/vulny%20(14).png)
 
-Lets follow this steps, we find nothing of interest in the database tables:(make sure we start the mysql service with `sudo service start mysql`)
+Lets follow this steps.And we find nothing of interest in the database tables(make sure we start the mysql service with `sudo service start mysql`):
 
 ![](images/vulny%20(15).png)
 
-Apparently, this database has no information at all, ideally , it would contain user and password information, I decide to do a little bit of research on the wp file manager and its version to see if it can be exploited in some way.
+Apparently, this database has no information at all, ideally , it would contain user and password information, I decide to do a little bit of research on the `wp file manager` and its version to see if it can be exploited in some way.
 
 After a while, a find a [github](https://github.com/ircashem/wp-file-manager-plugin-exploit) page, containing a exploit for this app, it a plugin for wordpress, and the exploit will a allow remote command execution, now I'll follow this steps, and see if I can get a reverse shell:
 
@@ -129,7 +129,7 @@ There we go! Lets see what we can find:
 
 ![](images/vulny%20(27).png)
 
-First, we find the user adrian, lets see if we can access his home folder, it seems we cannot traverse directories, let try that reverse shell we saw earlier on the github page of the exploit:
+First, we find the user adrian, lets see if we can access his `home` folder, it seems we cannot traverse directories, let try that reverse shell we saw earlier on the github page of the exploit:
 
 First we start our listener in our machine :
 
@@ -184,7 +184,7 @@ We search that program in [gtfobins](https://gtfobins.github.io/gtfobins/flock/)
 
 ![](images/vulny%20(40).png)
 
-We try this, and see if we can access the contents of the /root directory:
+We try this, and see if we can access the contents of the `/root` directory:
 
 ![](images/vulny%20(41).png)
 
@@ -194,10 +194,10 @@ Even better, we get root! Lets see if we can get that flag:
 
 And we have pwned the machine.
 
-## Thing I learned from this machine
+## Things I learned from this machine
 
-- Wordpress vulnerabililty in versions ranging from (6.0 to 6.8).
+- Wordpress vulnerability in versions ranging from (6.0 to 6.8).
 - How to access a database I downloaded from a file server with mysql(and that not always those databases will have data on them...).
-- Remember to start a bash shell when settinp up a full TTY in the netcat listener(if not using bash a main shell session).
+- Remember to start a bash shell when setting up a full TTY in the netcat listener(if not using bash a main shell session).
 - Check config files for useful information.
 - Apparently, after checking other writeups, I could've used the metasploit framework too for this machine.

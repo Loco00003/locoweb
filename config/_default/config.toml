@@ -26,6 +26,7 @@ buildFuture = false
   author = "authors"
   series = "series"
 
+
 [sitemap]
   changefreq = 'daily'
   filename = 'sitemap.xml'
@@ -63,3 +64,4 @@ buildFuture = false
       name = 'fragmentrefs'
       type = 'fragments'
       weight = 10
+

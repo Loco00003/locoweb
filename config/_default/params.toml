@@ -36,10 +36,10 @@ disableTextInHeader = false
   showScrollToTop = true
 
 [homepage]
-  layout = "basic" # valid options: page, profile, hero, card, background, custom
+  layout = "profile" # valid options: page, profile, hero, card, background, custom
   #homepageImage = "IMAGE.jpg" # used in: hero, and card
   showRecent = true
-  showRecentItems = 5
+  showRecentItems = 3
   showMoreLink = false
   showMoreLinkDest = "/posts"
   cardView = true
@@ -141,3 +141,4 @@ disableTextInHeader = false
   # bing = ""
   # pinterest = ""
   # yandex = ""
+

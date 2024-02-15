@@ -73,7 +73,7 @@ Still nothing, it only downloaded an empty html file. I decide to run another go
 
 ![](imagenes/Pasted%20image%2020240122193721.png)
 
-There's 8 lines, but they're blank. Now, we have a username, maybe we can try bruteforcing a password? Remember the SSH port was open, lets  try that, personally, I use hydra:
+There's 8 lines, but they're blank. Now, we have a username, maybe we can try bruteforcing a password? Remember the SSH port was open, lets try that, personally, I use hydra:
 
 `hydra -l teo -P /usr/share/wordlists/rockyou.txt 192.168.25.18 ssh -t 4`
 
@@ -216,7 +216,7 @@ So, in the image above, I saw something that interested me the `--digest` flag, 
 
 ![](imagenes/Pasted%20image%2020240122221244.png)
 
-Apparently its the "pop up box", as I called the first time I saw, now I know its proper name, so, I add the flag `--digest` and try again:
+Apparently its the "pop up box", as I called it the first time I saw it, now I know its proper name, so, I add the flag `--digest` and try again:
 
 ![](imagenes/Pasted%20image%2020240122221441.png)
 
@@ -280,7 +280,7 @@ There we have it! Lets copy that, name it `id_rsa` and give limited privileges w
 
 ![](imagenes/Pasted%20image%2020240122233232.png)
 
-We are for a passphrase, let's use `ssh2john` and and crack this hash:
+We are asked for a passphrase, let's use `ssh2john` and and crack this hash:
 
 ![](imagenes/Pasted%20image%2020240122233407.png)
 
