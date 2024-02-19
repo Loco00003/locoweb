@@ -3,7 +3,7 @@ title = "Webmaster"
 date = 2024-01-28T22:57:32-06:00
 summary="Another machine by sml, and pretty interesting too, introduced me to the use of the dig command."
 tags=["hackmyvm","pentesting","nginx","dns","dig"]
-series=["Hackmyvm Easy"]
+series=["Hackmyvm Fácil"]
 series_order=4
 draft= false
 +++

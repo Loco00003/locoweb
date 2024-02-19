@@ -4,7 +4,7 @@ date = 2024-01-20T14:47:53-06:00
 draft = false
 summary = "Writeup of the machine vulny from the hackmyvm website"
 tags = ["pentesting","hackmyvm","sql","wordpress","python"]
-series=['Hackmyvm Easy']
+series=['Hackmyvm Fácil']
 series_order=1
 +++
 

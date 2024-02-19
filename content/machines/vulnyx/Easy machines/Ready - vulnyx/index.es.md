@@ -4,7 +4,7 @@ date = 2024-01-20T16:44:27-06:00
 draft = false
 description = "Una de las pocas maquinas que he logrado resolver sin consultar writeups de otros hackers eticos"
 etiquetas = ["hacking etico","vulnyx","redis","password bruteforcing","john"]
-series=["Vulnyx Facil"]
+series=["Vulnyx Fácil"]
 series_order=1
 +++
 

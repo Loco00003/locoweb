@@ -4,7 +4,7 @@ date = 2024-02-07T19:41:10-06:00
 summary="Another machine by sml"
 draft=false
 tags=["pentesting","hackmyvm","easy","RCE","php","fuzzing"]
-series=["Hackmyvm Easy"]
+series=["Hackmyvm Fácil"]
 series_order=5
 +++
 ## Prefacio
@@ -13,6 +13,7 @@ Recién empece clases otra vez, entonces lo mas probable es que la pagina se act
 ## Información de la maquina
 | Nombre      | Insomnia                                                         | 
 | ---------- | ---------------------------------------------------------------- |
+|Sistema Operativo|Linux|
 | Autor     | alienum                                                                 |
 | Sitio      | [hackmyvm](https://hackmyvm.eu/machines/machine.php?vm=Insomnia) |
 | Dificultad | Fácil                                                                 |

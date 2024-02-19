@@ -3,7 +3,7 @@ title = "Helium"
 date = 2024-01-23T17:56:40-06:00
 summary="Another machine by sml, but this time with a twist, this one also took me a while..."
 tags=["pentesting","hackmyvm","steganography"]
-series=["Hackmyvm Easy"]
+series=["Hackmyvm Fácil"]
 series_order=3
 +++
 
@@ -20,7 +20,7 @@ Corro mi escaneo preferido de nmap `sudo nmap -oN helium_scan.txt -vv -sS -sC -s
 
 ![](imagenes/Pasted%20image%2020240123181823.png)
 
-Puerto 22 y 80 open, revisemos la pagina web:
+Puerto 22 y 80 abiertos, revisemos la pagina web:
 
 ![](imagenes/Pasted%20image%2020240123181931.png)
 

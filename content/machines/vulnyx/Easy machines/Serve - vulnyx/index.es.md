@@ -3,7 +3,7 @@ title = "Serve"
 date = 2024-01-21T12:18:15-06:00
 summary="Get ready for a long read, despite being an easy machine, took me a while to figure it out."
 tags=["python","keepass","pentesting","vulnyx","easy","password bruteforcing","hydra","john"]
-series=["Vulnyx Facil"]
+series=["Vulnyx Fácil"]
 series_order=2
 +++
 
