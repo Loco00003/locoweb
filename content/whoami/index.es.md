@@ -21,4 +21,4 @@ También servirá como portafolio para cualquier proyecto futuro relacionado con
 
 ¡Cualquier ayuda u observación acerca de errores en la página con respecto a la gramática, ortografía o elementos en la página que no funcionen, apreciaría sus comentarios!
 
-*Al día de la fecha de edición de este artículo 09/02/2024, esta página web sigue en construcción, elementos de la misma están sujetos a cambios.*
+*Al día de la fecha de edición de este artículo 18/02/2024, esta página web sigue en construcción, elementos de la misma están sujetos a cambios.*

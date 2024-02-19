@@ -21,4 +21,4 @@ If you've read through some of my write-ups or something else on my page, thanks
 
 Any help or observation about any mistake in the page regarding grammar, orthography, or any elements in the page that are not working correctly, I'd really appreciate your comments!
 
-*As of the date of 09/02/2024, this page is still under construction; its layout or information may change in the future.*
+*As of the date of 18/02/2024, this page is still under construction; its layout or information may change in the future.*
