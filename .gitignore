@@ -14,3 +14,10 @@ public
 bitacorapagina.md
 #vscode
 .vscode
+
+# Traduccion al japones en proceso
+languages.ja.toml
+menus.ja.toml
+index.ja.md
+_index.ja.md
+
