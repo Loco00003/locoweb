@@ -16,7 +16,7 @@ Reciente complete el contenido de [sobre escalada de privilegios de windows](htt
 | ---------- | ---------------------------------------------------------------- |
 |Sistema Operativo|Windows Server 2019|
 | Autor     | GatoGamer                                                          |
-| Sitio       | [hackmyvm](https://hackmyvm.eu/machines/machine.php?vm=Insomnia) | 
+| Sitio       | [hackmyvm](https://hackmyvm.eu/machines/machine.php?vm=Simple) | 
 | Dificultad| Fácil                                                                |
 
 
@@ -96,7 +96,7 @@ Tenemos un par de potenciales nombres de usuario, los tendremos en mente.Tambié
 
 En el proceso de revisar estos directorios manualmente, a todos ellos nos fue denegado el acceso. En vez de enumerar cada uno de ellos, sigo intentando otros medios.
 Ahora, tenemos esta información:
-- The following usernames:
+- Los siguientes nombres de usuario:
 	1. ruy
 	2. marcos
 	3. lander

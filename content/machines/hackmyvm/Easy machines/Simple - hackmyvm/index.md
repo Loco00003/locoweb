@@ -16,7 +16,7 @@ Recently completed the [windows privileges escalation room](https://tryhackme.co
 | ---------- | ---------------------------------------------------------------- |
 |OS|Windows Server 2019|
 | Author     | GatoGamer                                                          |
-| Site       | [hackmyvm](https://hackmyvm.eu/machines/machine.php?vm=Insomnia) | 
+| Site       | [hackmyvm](https://hackmyvm.eu/machines/machine.php?vm=Simple) | 
 | Difficulty | Easy                                                                 |
 
 ## Recon and enumeration
