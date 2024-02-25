@@ -8,7 +8,7 @@ series=["Hackmyvm Fácil"]
 series_order=7
 +++
 ## Prefacio
-Como dije en mis post previo, he estado un poco ocupado con la universidad, pero, todavía sigo aprendiendo de hacking ético en mi tiempo libre. Anyways, here's this easy machine by tasiyanci.
+Como dije en mis post previo, he estado un poco ocupado con la universidad, pero, todavía sigo aprendiendo de hacking ético en mi tiempo libre. De todas formas, sigamos con la resolucion de esta maquina fácil de tasiyanci.
 
 
 ## Información de la maquina
@@ -73,14 +73,14 @@ Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
 
 ```
 
-| Ports open | 21,22,80     |
+| Puertos abiertos | 21,22,80     |
 | ---------- | ------------ |
-| Services   | FTP,SSH,HTTP |
+| Servicios   | FTP,SSH,HTTP |
 Bien, parece que nos podemos conectar al servicio ftp, y con un login anónimo, revisemos:
 
 ![](imagenes/Pasted%20image%2020240224194509.png)
 
-Y si pudimos, revisemos que informacion podemos recopilar:
+Y si pudimos, revisemos que información podemos recopilar:
 
 ![](imagenes/Pasted%20image%2020240224194634.png)
 
@@ -88,11 +88,11 @@ Revisamos ese directorio en la pagina web:
 
 ![](imagenes/Pasted%20image%2020240224194704.png)
 
-Una imagen, la descargamos. Pero, antes que nada, reviso el codigo fuente de la pagina y encuentro esto:
+Una imagen, la descargamos. Pero, antes que nada, reviso el código fuente de la pagina y encuentro esto:
 
 ![](imagenes/Pasted%20image%2020240224194752.png)
 
-Parece ser algun tipo de hash, un hash `md5` para ser mas preciso, revisemos si lo es en [hashes.com](https://hashes.com) :
+Parece ser algún tipo de hash, un hash `md5` para ser mas preciso, revisemos si lo es en [hashes.com](https://hashes.com) :
 
 ![](imagenes/Pasted%20image%2020240224194856.png)
 
